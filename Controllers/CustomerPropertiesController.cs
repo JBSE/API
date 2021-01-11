@@ -80,7 +80,7 @@ namespace API.Controllers
             _context.CustomerItems.Add(customerProperties);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCustomerProperties", new { id = customerProperties.Id }, customerProperties);
+            return CreatedAtAction(nameof(GetCustomerItems), new { id = customerProperties.Id }, customerProperties); ;
         }
 
         // DELETE: api/CustomerProperties/5
